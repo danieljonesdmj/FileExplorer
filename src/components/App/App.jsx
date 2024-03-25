@@ -1,11 +1,7 @@
 import Display from "../Display/Display";
 
 function App() {
-  return (
-    <div>
-      <Display />
-    </div>
-  );
+  return <Display />;
 }
 
 export default App;

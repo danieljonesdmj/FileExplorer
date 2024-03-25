@@ -50,7 +50,7 @@
         "size": "3Mb"
       },
       {
-        "type": "mov",
+        "type": "pdf",
         "name": "Welcome to the company!",
         "added": "2015-04-24",
         "size": "20Mb"
@@ -70,7 +70,7 @@
         "size": "3Mb"
       },
       {
-        "type": "mov",
+        "type": "doc",
         "name": "Your annual leave allocation",
         "added": "2023-04-24",
         "size": "10Mb"
