@@ -1,0 +1,118 @@
+[
+  {
+    "type": "pdf",
+    "name": "Employee Handbook",
+    "added": "2017-01-06",
+    "size": "10Mb"
+  },
+  {
+    "type": "pdf",
+    "name": "Public Holiday policy",
+    "added": "2016-12-06",
+    "size": "2Mb"
+  },
+  {
+    "type": "folder",
+    "name": "Expenses",
+    "added": "2013-01-24",
+    "size": "2Mb",
+    "files": [
+      {
+        "type": "doc",
+        "name": "Expenses claim form",
+        "added": "2017-05-02",
+        "size": "1Mb"
+      },
+      {
+        "type": "doc",
+        "name": "Fuel allowances",
+        "added": "2017-05-03",
+        "size": "1Mb"
+      }
+    ]
+  },
+  {
+    "type": "csv",
+    "name": "Cost centres",
+    "added": "2016-08-12",
+    "size": "1Mb"
+  },
+  {
+    "type": "folder",
+    "name": "Misc",
+    "added": "2012-04-24",
+    "size": "23Mb",
+    "files": [
+      {
+        "type": "doc",
+        "name": "Christmas party",
+        "added": "2017-12-01",
+        "size": "3Mb"
+      },
+      {
+        "type": "mov",
+        "name": "Welcome to the company!",
+        "added": "2015-04-24",
+        "size": "20Mb"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Absences",
+    "added": "2010-04-24",
+    "size": "21Mb",
+    "files": [
+      {
+        "type": "doc",
+        "name": "Annual leave policy",
+        "added": "2017-12-01",
+        "size": "3Mb"
+      },
+      {
+        "type": "mov",
+        "name": "Your annual leave allocation",
+        "added": "2023-04-24",
+        "size": "10Mb"
+      },
+      {
+        "type": "doc",
+        "name": "Sickness policy",
+        "added": "2015-04-24",
+        "size": "8Mb"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Disciplinary",
+    "added": "2013-04-02",
+    "size": "4Mb",
+    "files": [
+      {
+        "type": "doc",
+        "name": "Disciplinary policy",
+        "added": "2018-12-01",
+        "size": "1Mb"
+      },
+      {
+        "type": "doc",
+        "name": "Termination",
+        "added": "2012-04-24",
+        "size": "3Mb"
+      }
+    ]
+  },
+  {
+    "type": "pdf",
+    "name": "Maternity Handbook",
+    "added": "2014-01-06",
+    "size": "1Mb"
+  },
+  {
+    "type": "pdf",
+    "name": "Flexible working policy",
+    "added": "2019-12-06",
+    "size": "4Mb"
+  }
+]
