@@ -32,8 +32,18 @@ function Display() {
       break;
   }
 
-  files = files.filter((file) => {
-    return file.name.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredFiles = [];
+  files.map((file) => {
+    if (searchTerm && file.files) {
+      file.files.map((childFile) => {
+        if (childFile.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+          filteredFiles.push(childFile);
+        }
+      });
+    }
+    if (file.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+      filteredFiles.push(file);
+    }
   });
 
   function handleClick(event) {
@@ -53,9 +63,9 @@ function Display() {
           inputRef={searchInputRef}
         />
       </div>
-      <ul className="mb-8">
-        {files.length > 0
-          ? files.map((file, index) => <File key={index} file={file} />)
+      <ul className="mb-8" aria-label="file-list">
+        {filteredFiles.length > 0
+          ? filteredFiles.map((file, index) => <File key={index} file={file} />)
           : "No files found"}
       </ul>
       {searched && searchTerm !== "" && (
