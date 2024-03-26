@@ -18,31 +18,31 @@ function Display() {
   const [searched, setSearched] = useState(false);
   const searchInputRef = useRef(null);
 
-  let files;
+  let sortedData;
 
   switch (sortBy) {
     case "Name":
-      files = sortedByName;
+      sortedData = sortedByName;
       break;
     case "Date":
-      files = sortedByDate;
+      sortedData = sortedByDate;
       break;
     case "Size":
-      files = sortedBySize;
+      sortedData = sortedBySize;
       break;
   }
 
-  const filteredFiles = [];
-  files.map((file) => {
-    if (searchTerm && file.files) {
-      file.files.map((childFile) => {
+  const filteredFilesAndFolders = [];
+  sortedData.map((data) => {
+    if (searchTerm && data.files) {
+      data.files.map((childFile) => {
         if (childFile.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-          filteredFiles.push(childFile);
+          filteredFilesAndFolders.push(childFile);
         }
       });
     }
-    if (file.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-      filteredFiles.push(file);
+    if (data.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+      filteredFilesAndFolders.push(data);
     }
   });
 
@@ -64,8 +64,10 @@ function Display() {
         />
       </div>
       <ul className="mb-8" aria-label="file-list">
-        {filteredFiles.length > 0
-          ? filteredFiles.map((file, index) => <File key={index} file={file} />)
+        {filteredFilesAndFolders.length > 0
+          ? filteredFilesAndFolders.map((file, index) => (
+              <File key={index} file={file} />
+            ))
           : "No files found"}
       </ul>
       {searched && searchTerm !== "" && (

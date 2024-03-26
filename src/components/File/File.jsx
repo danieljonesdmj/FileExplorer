@@ -6,7 +6,7 @@ function File({ file }) {
 
   return (
     <>
-      {file.type === "folder" && (
+      {file.type === "folder" ? (
         <li
           className="flex flex-col cursor-pointer mb-4"
           onClick={() => setFolderOpen(!folderOpen)}
@@ -19,6 +19,7 @@ function File({ file }) {
               strokeWidth={1.5}
               stroke="currentColor"
               className="w-6 h-6 pr-1"
+              data-testid="folder-svg"
             >
               <path
                 strokeLinecap="round"
@@ -40,6 +41,7 @@ function File({ file }) {
                       strokeWidth={1.5}
                       stroke="currentColor"
                       className="w-6 h-6 pr-1"
+                      data-testid="file-svg"
                     >
                       <path
                         strokeLinecap="round"
@@ -50,12 +52,11 @@ function File({ file }) {
                     {`${file.name} - ${file.added} - ${file.size}`}
                   </li>
                 );
-              })}{" "}
+              })}
             </ul>
           )}
         </li>
-      )}
-      {file.type !== "folder" && (
+      ) : (
         <li className="mb-4 cursor-default">
           <div className="flex flex-row">
             <svg
@@ -65,6 +66,7 @@ function File({ file }) {
               strokeWidth={1.5}
               stroke="currentColor"
               className="w-6 h-6 pr-1"
+              data-testid="file-svg"
             >
               <path
                 strokeLinecap="round"

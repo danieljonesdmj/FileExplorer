@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 function Filter({ setSearchTerm, setSearched, inputRef }) {
   function handleSubmit(event) {
     event.preventDefault();
-    setSearchTerm(event.target[0].value);
+    const searchInput = event.target.firstChild.firstChild;
+    setSearchTerm(searchInput.value);
     setSearched(true);
   }
 
@@ -15,6 +16,7 @@ function Filter({ setSearchTerm, setSearched, inputRef }) {
           id="search"
           className="p-2 border border-gray bg-gray"
           ref={inputRef}
+          data-testid="search-bar"
         />
         <button type="submit" className="text-white bg-blue-600 text-sm p-2">
           Search
